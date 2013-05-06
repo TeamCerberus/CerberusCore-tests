@@ -6,7 +6,8 @@ import net.minecraftforge.common.Configuration;
 
 public class Config {
 	final Configuration	config;
-
+	final ConfigExample2 configExample2;
+	
 	@ConfigurationOption(category = "category1", key = "testInt1",
 			comment = "this is a comment")
 	public int			testInt1		= 1234567;
@@ -24,5 +25,6 @@ public class Config {
 	public Config(Configuration config) {
 		this.config = config;
 		ConfigurationParser.Parse(this, config);
+		this.configExample2 = new ConfigExample2(config);
 	}
 }
