@@ -2,6 +2,7 @@ package teamcerberus.cerberuscore.test;
 
 import net.minecraftforge.common.Configuration;
 import teamcerberus.cerberuscore.config.ConfigurationClass;
+import teamcerberus.cerberuscore.config.ConfigurationComment;
 import teamcerberus.cerberuscore.config.ConfigurationParser;
 
 public class ConfigExample2 {
@@ -14,7 +15,9 @@ public class ConfigExample2 {
 	
 	@ConfigurationClass
 	public class Options {
+		@ConfigurationComment("This is the comment")
 		public boolean ShouldIDoThis = false;
+
 	}
 	@ConfigurationClass
 	public class Items {
