@@ -3,6 +3,7 @@ package teamcerberus.cerberuscore.test;
 import java.lang.reflect.Field;
 
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PreInit;
@@ -35,6 +36,6 @@ public class CerberusTest {
 
 	@Init
 	public void init(FMLInitializationEvent event) {
-
+		MinecraftForge.EVENT_BUS.register(new EventTest());
 	}
 }
